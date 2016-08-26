@@ -1,0 +1,15 @@
+#!/bin/bash
+
+source /usr/share/yunohost/helpers
+
+sudo rm /etc/cron.d/fts-solr
+
+sudo rm /etc/dovecot/yunohost.d/solr.conf
+sudo service dovecot reload
+
+sudo rm /etc/solr/conf/schema.xml
+sudo mv /etc/solr/conf/schema.xml.orig /etc/solr/conf/schema.xml
+sudo sed -i '/NO_START/c\NO_START=1' /etc/default/jetty8
+sudo service jetty8 stop
+
+ynh_package_remove dovecot-solr solr-jetty

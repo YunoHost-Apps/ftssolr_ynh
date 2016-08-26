@@ -1,0 +1,4 @@
+#!/bin/bash
+
+source ./ftssolr_common.sh
+install_ftssolr

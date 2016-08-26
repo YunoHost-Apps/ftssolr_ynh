@@ -1,0 +1,25 @@
+{
+    "name": "Solr Full Text Search",
+    "id": "ftssolr",
+    "packaging_format": 1,
+    "requirements": {
+        "yunohost": ">> 2.4"
+    },
+    "description": {
+        "en": "Full Text Search via IMAP through a Solr indexing server",
+        "fr": "Full Text Search via IMAP through a Solr indexing server"
+    },
+    "url": "http://wiki.dovecot.org/Plugins/FTS/Solr",
+    "maintainer": {
+        "name": "julien",
+        "email": "julien.malik@paraiso.me"
+    },
+    "multi_instance": "false",
+    "services": [
+        "dovecot"
+    ],
+    "arguments": {
+        "install" : [
+        ]
+    }
+}

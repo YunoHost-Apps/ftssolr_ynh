@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# causes the shell to exit if any subcommand or pipeline returns a non-zero status
+set -e
+
+# Source YNH helpers
+. /usr/share/yunohost/helpers
+
+app=$YNH_APP_INSTANCE_NAME
+
+# Backup directory location for the app from where the script is executed and 
+# which will be compressed afterward
+backup_dir=$YNH_APP_BACKUP_DIR
+
+# There is no data to backup for this app
