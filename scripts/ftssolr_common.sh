@@ -18,9 +18,10 @@ install_ftssolr() {
     sudo ln -s /usr/share/dovecot/solr-schema.xml /etc/solr/conf/schema.xml
 
     # Drop the solr conf for dovecot to the dovecot conf extension folder
-    sudo tee /etc/dovecot/yunohost.d/solr.conf > /dev/null << EOF
+    sudo tee /etc/dovecot/yunohost.d/pre-ext.d > /dev/null << EOF
 mail_plugins = $mail_plugins fts fts_solr
-
+EOF
+    sudo tee /etc/dovecot/yunohost.d/post-ext.d > /dev/null << EOF
 plugin {
   fts = solr
   fts_solr = url=http://127.0.0.1:8983/solr/ break-imap-search
