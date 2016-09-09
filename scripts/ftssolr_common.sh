@@ -51,7 +51,7 @@ MAILTO=root
 
 # If you require to force dovecot to reindex a whole mailbox you can run the command shown, 
 #  this will only take action when a search is done and will apply to the whole mailbox
-22 02 * * * vmail /usr/bin/doveadm fts rescan -A
+22 02 * * * root /usr/bin/doveadm fts rescan -A
 EOF
 
   sudo service jetty8 start
