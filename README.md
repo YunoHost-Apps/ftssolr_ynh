@@ -2,10 +2,12 @@
 
 Solr Full Text Search for dovecot
 
-Thanks to :
-http://wiki.dovecot.org/Plugins/FTS/Solr
-https://blog.vbonhomme.fr/add-full-text-search-fts-to-your-dovecot-using-solr-4-10-on-ubuntu-14-04/
-https://github.com/andryyy/mailcow
+## WARNING
+
+This app does NOT work on vanilla yunohost.
+This app requires https://github.com/YunoHost/yunohost/pull/175 to be integrated first.
+
+## How to test
 
 The first time you search inside one mailbox, dovecot will index it.
 Subsequent searches will run blazingly faster.
@@ -32,3 +34,11 @@ You can enable the "Entire message" checkbox for full text search.
 
 To use the Full Text Search capabilities of the IMAP server from Thunderbird (instead of using Thunderbird own index),
 search your messages with Ctrl+Shift+F
+
+## Thanks
+
+Thanks to the following docs/implementations :
+- http://wiki.dovecot.org/Plugins/FTS/Solr
+- https://blog.vbonhomme.fr/add-full-text-search-fts-to-your-dovecot-using-solr-4-10-on-ubuntu-14-04/
+- https://github.com/andryyy/mailcow
+
